@@ -1,0 +1,53 @@
+<p>excelsheet works!</p>
+
+<div class="col-md-8 form-group">
+  <input type="file" class="form-control" (change)="addfile($event)" placeholder="Upload file"
+    accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+</div>
+<br>
+<br>
+<label for="name">Name (4 to 8 characters):</label>
+
+<input type="text" id="name" name="name" size="10" [(ngModel)]="id">
+<button type="button" (click)="buscar()">Click</button>
+<input type="text" id="name" name="name" size="10" [(ngModel)]="persona.NOMBRE">
+<br>
+<br>
+ <div class="container">
+  <div class="row">
+    <div id="htmlData">
+      <body background="./img/imagen.jpeg">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>{{nombre}}</h1>
+      </body>
+
+    </div>
+    <div>
+      <button class="btn col col-lg-4 btn-danger btn-block ml-4" (click)="downloadPDF()">Download PDF</button>
+    </div>
+   </div>
+</div> 
+
+<style>
+  body {
+    height:777px ;
+    width: 1010px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+</style>
