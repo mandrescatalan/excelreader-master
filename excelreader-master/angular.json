@@ -94,8 +94,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           }
         },
         "lint": {
@@ -124,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "excelReader"
+    }
+  },
+  "defaultProject": "excelReader",
+  "cli": {
+    "analytics": "5e8c0879-3d39-446a-a3dd-82bcefd8104e"
+  }
 }

@@ -60,7 +60,7 @@ export class ExcelsheetComponent implements OnInit {
     this.personas.forEach(element => {
       if (element.CEDULA == this.id) {
         this.persona = element;
-         this.nombre = element.NOMBRE;
+        this.nombre = element.NOMBRE;
       }
     });
   }
@@ -82,12 +82,9 @@ export class ExcelsheetComponent implements OnInit {
       const img = canvas.toDataURL('image/PNG');
 
       // Add image Canvas to PDF
-      const bufferX = 0;
-      const bufferY = 0;
-      const imgProps = (doc as any).getImageProperties(img);
-      const pdfWidth = 378;
-      const pdfHeight = 211;
-      doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
+      const pdfWidth = 297;
+      const pdfHeight = 210;
+      doc.addImage(img, 'JPEG', 0, 0, pdfWidth, pdfHeight);
       return doc;
     }).then((docResult) => {
       docResult.save(`${new Date().toISOString()}_tutorial.pdf`);
